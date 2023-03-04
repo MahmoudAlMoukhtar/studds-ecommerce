@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  //baseURL: "https://e-commer-mernstack.vercel.app/api",
-  baseURL: "http://localhost:3001/api",
+  baseURL: "https://studds-ecommerce.vercel.app/api/",
+  //baseURL: "http://localhost:3001/api",
 });
 API.interceptors.request.use(req => {
   if (localStorage.getItem("userEcommerce")) {
