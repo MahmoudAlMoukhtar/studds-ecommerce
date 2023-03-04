@@ -1,0 +1,38 @@
+
+*{
+    scroll-behavior: smooth
+}
+
+#App{
+    background: linear-gradient(to right,
+                #d9d4ce 40%,
+                #ca0202 40%,
+                #ca0202 60%,                
+                #d9d4ce 60%,
+                #d9d4ce 100%);
+}
+
+#landing{
+    background-image: url('/public/collection.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
+}
+
+
+.on {
+    color: #ca0202;
+}
+
+.off {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    #landing {
+            background-image:inherit; 
+    
+    
+        }
+    }
