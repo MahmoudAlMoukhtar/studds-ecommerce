@@ -47,7 +47,7 @@ const Navbar = ({setNavBarModal, navbarModal}) => {
       </ul>
       <Link
         to="/"
-        className="flex flex-col text-white font-bold text-3xl lg:text-4xl xl:text-5xl   sm:mx-[50px] lg:mx-[100px] lg:ml-[130px]"
+        className="flex flex-col text-white font-bold text-3xl lg:text-4xl xl:text-5xl    md:mr-[100px]  md:ml-[130px]"
       >
         STUDDS
       </Link>

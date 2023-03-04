@@ -8,6 +8,7 @@ import {fetchProductByIdAction} from "../../redux/actions/productsActions";
 import {addProductCartAction} from "../../redux/actions/cart";
 import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BeatLoader from "react-spinners/BeatLoader";
 
 const DetailProduct = () => {
   //react router
@@ -34,13 +35,25 @@ const DetailProduct = () => {
     },
   };
   //return jsx UI product
-  if (loadingProduct) return <Spinner />;
+  if (loadingProduct)
+    return (
+      <div className="flex flex-col justify-center min-h-screen ">
+        <BeatLoader
+          color={"#000"}
+          loading={true}
+          cssOverride={""}
+          size={20}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        ></BeatLoader>
+      </div>
+    );
   return (
     <motion.div
       variants={container}
       animate="visible"
       initial="hidden"
-      className="flex  justify-between items-start gap-20 px-40 my-20 py-10  bg-[#d9d4ce] text-black "
+      className="flex justify-between flex-warp items-start gap-20 px-4 sm:px-10 flex-col md:flex-row xl:px-40 my-20 py-10  bg-[#d9d4ce] text-black"
     >
       <div className="">
         <img
